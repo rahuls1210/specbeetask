@@ -48,16 +48,18 @@ class TimezoneForm extends ConfigFormBase {
     	'#title' => t('Timezone'),
     	'#type' => 'select',
     	'#description' => 'Select timezone.',
+			'#default_value' => $config->get('timezone'),
     	'#options' => [
-				'1' => $this->t('America/Chicago'),
-				'2' => $this->t('America/New_York'),
-				'3' => $this->t('Asia/Tokyo'),
-				'4' => $this->t('Asia/Dubai'),
-				'5' => $this->t('Asia/Kolkata'),
-				'6' => $this->t('Europe/Amsterdam'),
-				'7' => $this->t('Europe/Oslo'),
-				'8' => $this->t('Europe/London')
+				'America/Chicago' => $this->t('America/Chicago'),
+				'America/New_York' => $this->t('America/New_York'),
+				'Asia/Tokyo' => $this->t('Asia/Tokyo'),
+				'Asia/Dubai' => $this->t('Asia/Dubai'),
+				'Asia/Kolkata' => $this->t('Asia/Kolkata'),
+				'Europe/Amsterdam' => $this->t('Europe/Amsterdam'),
+				'Europe/Oslo' => $this->t('Europe/Oslo'),
+				'Europe/London' => $this->t('Europe/London')
     	],
+			
   	];
     return parent::buildForm($form, $form_state);  
   }
